@@ -1,4 +1,4 @@
-# BauduWenkuSpider
+# BaiduWenkuSpider
 实现对百度文库文档以pdf形式原格式下载
 
 ## 简介
