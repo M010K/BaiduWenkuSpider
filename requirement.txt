@@ -1,0 +1,5 @@
+requests
+chardet
+bs4
+Pillow
+pdfkit
