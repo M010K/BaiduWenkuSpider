@@ -78,9 +78,6 @@ GetPpt('https://wenku.baidu.com/view/a5fc216dc9d376eeaeaad1f34693daef5ff7130b.ht
 ```
 
 ```python
-    GetAll('https://wenku.baidu.com/view/fb92d7d3b8d528ea81c758f5f61fb7360a4c2b61.html?from=search',"存储路径").Run()
+GetAll('https://wenku.baidu.com/view/fb92d7d3b8d528ea81c758f5f61fb7360a4c2b61.html?from=search',"存储路径").Run()
 ```
-
-
-
 
