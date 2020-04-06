@@ -580,47 +580,6 @@ class GetAll:
         return a + ";"
 
 
-    # 将获取的图片合成pdf文件
-    def mergeImageToPDF(self, pages, type):
-        """
-        :param pages:pdf页面总数
-        :param type: 图片类型
-        """
-        if pages == 0:
-            raise IOError
-
-        namelist = [str(x)+'.'+type for x in range(pages)]
-        # savepath = self.savepath+'/'+self.wkinfo.get('title')+'.pdf'
-        with open(self.savepath,'wb') as f:
-
-            f.write(img2pdf.convert(namelist))
-
-
-    # 清除下载的图片
-    def removeImage(self, pages, type):
-        """
-        :param pages:pdf页面总数
-        :param type: 图片类型
-        """
-        namelist = [str(x)+'.'+type for x in range(pages)]
-        for name in namelist:
-            if os.path.exists(name):
-                os.remove(name)
-
-    def convertHtmlToImage(self):
-        options = {
-            "quality": 100,
-        }
-        imgkit.from_file(self.htmlfile, self.savepath, options=options)
-        preimage = Image.open(self.savepath)
-        size = preimage.size
-        totalpage = int(self.wkinfo.get('totalPageNum'))
-        height = size[1] / totalpage
-        for index in range(totalpage):
-            box = (0, height*index, size[0], height*(index+1))
-            image = preimage.crop(box)
-            image.save(str(index)+'.jpg')
-
     def convertHtmlToPdf(self):
         savepath = os.path.join(self.pdfsdirpath, str(self.startpage)+self.wkinfo.get('title') + '.pdf')
 
