@@ -20,7 +20,7 @@
 最简单的安装方式是直接克隆整个仓库：
 
 ```powershell
-$ git clone https://github.com/M010K/BauduWenkuSpider
+$ git clone https://github.com/M010K/BaiduWenkuSpider
 ```
 
 当然也可以选择下载zip文件至本地
