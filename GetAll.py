@@ -6,10 +6,6 @@ from bs4 import BeautifulSoup
 import re
 import json
 import math
-import imgkit
-from PIL import Image
-import img2pdf
-import pdfkit
 from GetPpt import GetPpt
 import time
 
@@ -62,7 +58,7 @@ class GetAll:
 
     def addMessageToHtml(self,message):
         """:param message:向html文档中添加内容 """
-        with open(os.path.join(self.htmlsdirpath, str(self.startpage) + self.htmlfile), "a") as a:
+        with open(os.path.join(self.htmlsdirpath, str(self.startpage) + self.htmlfile), "a", encoding='utf-8') as a:
             a.write(message)
 
     # 获取网站源代码
