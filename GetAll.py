@@ -8,6 +8,7 @@ import json
 import math
 from GetPpt import GetPpt
 import time
+import pdfkit
 
 class GetAll:
     def __init__(self, url, savepath):
